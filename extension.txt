@@ -1,0 +1,10 @@
+[general]
+tatic=yes
+writeprotect=no
+clearglobalvars=no
+
+[myphones]
+; Call POTS numbers through Foo Provider (any number 10 digits)
+exten => _0XXXXXXXXX,1,Dial(SIP/${EXTEN}@voipgateway_ip)
+exten => _0XXXXXXXXX,n,Playtones(congestion)
+exten => _0XXXXXXXXX,n,Hangup()
